@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("HERE")
+	fmt.Println("Welcome to Red Hat NEXT!")
 }

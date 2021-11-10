@@ -24,8 +24,6 @@ jobs:
     - uses: sigstore/cosign-installer@main
     - name: login
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-    - name: set base image
-      run: echo "defaultBaseImage: registry.hub.docker.com/redhat/ubi8-micro" | tee $HOME/.ko.yaml
     - name:
       run: KO_DOCKER_REPO=ghcr.io/bobcallaway/hello-ko ko publish --bare github.com/bobcallaway/hello-ko
     - name:

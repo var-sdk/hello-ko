@@ -1,3 +1,3 @@
-module github.com/bobcallaway/hello-ko
+module github.com/haydentherapper/hello-ko
 
 go 1.17

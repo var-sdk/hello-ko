@@ -25,6 +25,6 @@ jobs:
     - name: login
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
     - name:
-      run: KO_DOCKER_REPO=ghcr.io/bobcallaway/hello-ko ko publish --bare github.com/bobcallaway/hello-ko
+      run: KO_DOCKER_REPO=ghcr.io/haydentherapper/hello-ko ko publish --bare github.com/haydentherapper/hello-ko
     - name:
-      run: COSIGN_EXPERIMENTAL=1 cosign sign -a git_sha=$GITHUB_SHA ghcr.io/bobcallaway/hello-ko
+      run: COSIGN_EXPERIMENTAL=1 cosign sign -a git_sha=$GITHUB_SHA ghcr.io/haydentherapper/hello-ko
